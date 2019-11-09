@@ -1,22 +1,17 @@
-#buttonID{
-  width: 505px
-  
 
-}
-#formID{
-  background-color: lightblue;
+ #formID{
   border-style:groove;
   border-width: medium;
 }
 h1{
   text-align: center;
 }
-.form-group{
-  text-align: center;
+#buttonID{
+  padding: 2px;
+  border-style: solid;
+  position: relative;
+
 }
-.form-check-label{
-  text-align: center;
-}
-#sizeID{
-  with:300px;
+body{
+  background-color: lightblue;
 }

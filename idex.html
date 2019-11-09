@@ -8,45 +8,54 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Order Pizza</h1>
+    <h1>Order Pizza</h1>
+    <div class="container-fluid">
       <form id ="formID">
-        <label for="">Choose your pizza toppings:</label><br>
-        <div class="from-group">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" name="pizza" value="Cheese">
-          <label class="form-check-label">Cheese Pizza</label>
-          </div><br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <label for="">Choose your pizza toppings:</label><br>
+            <div class="from-group">
+             <div class="form-check">
+             <input type="checkbox" class="form-check-input" name="pizza" value="Cheese">
+             <label class="form-check-label">Cheese Pizza</label>
+             </div><br>
 
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" name="pizza" value="Pepperoni">
-          <label class="form-check-label">Pepperoni Pizza.</label>
-          </div><br>
+              <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="pizza" value="Pepperoni">
+              <label class="form-check-label">Pepperoni Pizza.</label>
+              </div><br>
 
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" name="pizza" value="Artichoke">
-          <label class="form-check-label">Artichoke Pizza.</label>
-          </div><br>
+              <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="pizza" value="Artichoke">
+              <label class="form-check-label">Artichoke Pizza.</label>
+              </div><br>
 
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" name="pizza" value="Anchovy">
-          <label class="form-check-label">Anchovy Pizza.</label>
-          </div><br>
+              <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="pizza" value="Anchovy">
+              <label class="form-check-label">Anchovy Pizza.</label>
+              </div><br>
+           </div>
+           </div>
+           </div>
+           <div class="col-md-6">
+           <div class="card">
+           <div class="form-group">
+              <label for="">Choose your size:</label><br>
+              <select class="from-control" id="sizeID" name="">
+              <option value="">Select</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          </div>
+          </div>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block" name="button" id="buttonID">Order Pizza</button><br>
        </div>
-        <div class="form-group">
-          <label for="">Choose your size:</label>
-          <select class="from-control" id="sizeID" name="">
-            <option value="">Select</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-        </div><br>
-        <button type="submit" class="btn-info" name="button" id="buttonID">Submit</button>
-      </form>
-     <div class="output">
-
-     </div>
+     </form><br>
+     <div id="output" class="jumbotron">
+    </div>
     </div>
   </body>
 </html>

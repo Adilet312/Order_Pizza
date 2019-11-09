@@ -1,11 +1,14 @@
-
+                      /*Backend logic*/
+/*Class name  is Pizza and it has two instance variables*/
 function Pizza(typePizza,size){
   this.typePizza = typePizza;
   this.size = size;
 }
+/*getPizza() method returns pizza type  and size by concatenating.*/
 Pizza.prototype.getPizza=function(){
   return ("Pizza type: "+this.typePizza+", Size of the pizza: "+this.size);
 }
+/*totalPrice() returns total price based on user's order*/
 Pizza.prototype.totalPrice=function(){
   if(this.typePizza==="Cheese" && this.size==='small'){return 20}
   else if(this.typePizza==="Cheese" && this.size==='medium'){return 30}
@@ -20,23 +23,26 @@ Pizza.prototype.totalPrice=function(){
   else if(this.typePizza==="Anchovy" && this.size==='medium'){return 35}
   else if(this.typePizza==="Anchovy" && this.size==='large'){return 45}
 }
+/*Class name is PizzaList that stores all pizzas from user.*/
 function PizzaList(){
   this.list = [];
   this.currentId = 0;
-  this.size = 0;
 }
+/* addPizza(parameter) adds Pizzas into list.*/
 PizzaList.prototype.addPizza=function(pizza){
   pizza.id = this.assignId();
-  console.log(pizza.getPizza());
   this.list.push(pizza);
-  this.size++;
 }
+/*assignId() method keeps track it's index number of the Pizzas*/
 PizzaList.prototype.assignId=function(){
   this.currentId+=1;
   return this.currentId;
 }
+/*getSize() returns size of the list*/
 PizzaList.prototype.getSize = function(){
-    return this.size; }
+    return this.currentId;
+}
+/*findPizzaById(parameter) method to find pizza by its index number.*/
 PizzaList.prototype.findPizzaById=function(idx){
   for(var i=0; i<this.list.length; i++){
     if(this.list[i].id===idx){
@@ -45,8 +51,8 @@ PizzaList.prototype.findPizzaById=function(idx){
   }
 }
 
-
-var pizzalist = new PizzaList();
+/*Fondend logic*/
+var pizzalist = new PizzaList();//ref
 $(document).ready(function()
 {
   $("#formID").submit(function(event)
@@ -69,12 +75,12 @@ $(document).ready(function()
       total_amount+=pizzalist.findPizzaById(index).totalPrice();
 
     }
-    //console.log(pizzalist.findPizzaById(2).totalPrice());
-    //console.log(pizzalist.findPizzaById(2).getPizza());
+
     var result = "Total price: $"+total_amount+'\n'
                  +"Number of pizzas: "+pizzalist.getSize()+'\n'
                  +"Size of pizzas: "+inputSize;
-    $(".output").text(result);
+    $("#output").text(result);
+    console.log(pizzalist.getSize())
 
 
 

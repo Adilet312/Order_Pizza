@@ -1,16 +1,14 @@
-
- #formID{
-  border-style:groove;
-  border-width: medium;
+#output{
+  display:none;
 }
 h1{
   text-align: center;
 }
-#buttonID{
-  padding: 2px;
-  border-style: solid;
-  position: relative;
-
+#outputPrice{
+  display: none;
+  color: red;
+  text-align: center;
+  
 }
 body{
   background-color: lightblue;

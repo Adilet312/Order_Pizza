@@ -1,61 +1,62 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Order Pizza</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <h1>Order Pizza</h1>
-    <div class="container-fluid">
-      <form id ="formID">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
-            <label for="">Choose your pizza toppings:</label><br>
-            <div class="from-group">
-             <div class="form-check">
-             <input type="checkbox" class="form-check-input" name="pizza" value="Cheese">
-             <label class="form-check-label">Cheese Pizza</label>
-             </div><br>
+    <head>
+        <title>Pizza Order</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <h1>Pizza Order</h1>
+        <div class="container">
+            
+                 <!-- full name text box -->
+                 <div class=form-group>
+                        <label for="">Enter full name:</label>
+                        <input type="text" id="fullNameID" class="form-control">
+                    </div>
+                    <!-- address text box -->
+                 <div class=form-group>
+                        <label for="">Enter delivery address:</label>
+                        <input type="text" id="addressID" class="form-control">
+                 </div>
+                    <button onclick="addressAndName()" id="adID" class="btn btn-secondary btn-lg btn-block">Submit</button></br>
+            
+            <form action="" id="formID" name="formName">
+                <!-- Type of pizza select box -->
+                <div class="form-group">
+                    <label for="">Choose type of the pizza:</label>
+                    <select name="pizzaType" id="pizzaTypeID" class="form-control">
+                        <option value="" selected>Select</option>
+                        <option value="cheesePizza">Cheese Pizza</option>
+                        <option value="pepperoniPizza">Pepporeni Pizza</option>
+                        <option value="artichokePizza">Artichoke Pizza</option>
+                    </select>
+                </div></br>
+                <!-- Size of pizza select box -->
+                <div class="form-group">
+                    <label for="">Choose size of the Pizza:</label>
+                        <select name="sizeName" id="sizeID" class="form-control">
+                            <option value=""selected>Select</option>
+                            <option value="small">Small Pizza</option>
+                            <option value="medium">Medium Pizza</option>
+                            <option value="large">Large Pizza</option>
+                        </select>
+                </div></br>
 
-              <div class="form-check">
-              <input type="checkbox" class="form-check-input" name="pizza" value="Pepperoni">
-              <label class="form-check-label">Pepperoni Pizza.</label>
-              </div><br>
+                
 
-              <div class="form-check">
-              <input type="checkbox" class="form-check-input" name="pizza" value="Artichoke">
-              <label class="form-check-label">Artichoke Pizza.</label>
-              </div><br>
+                <button onclick="addOrders()" type="button" class="btn btn-secondary btn-lg btn-block" id="buttonID">
+                    Add To Basket
+                </button>
+                
+            </form>
+            <button onclick="placeOrder()" id="secondID" class="btn btn-secondary btn-lg btn-block">Order</button></br>
+        </div>
+        <div id="output" class="jumbotron">
 
-              <div class="form-check">
-              <input type="checkbox" class="form-check-input" name="pizza" value="Anchovy">
-              <label class="form-check-label">Anchovy Pizza.</label>
-              </div><br>
-           </div>
-           </div>
-           </div>
-           <div class="col-md-6">
-           <div class="card">
-           <div class="form-group">
-              <label for="">Choose your size:</label><br>
-              <select class="from-control" id="sizeID" name="">
-              <option value="">Select</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-            </select>
-          </div>
-          </div>
-          </div>
-        <button type="submit" class="btn btn-secondary btn-lg btn-block" name="button" id="buttonID">Order Pizza</button><br>
-       </div>
-     </form><br>
-     <div id="output" class="jumbotron">
-    </div>
-    </div>
-  </body>
+        </div>
+        <label id="outputPrice">
+    </label>
+    </body>
 </html>

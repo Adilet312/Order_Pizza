@@ -78,7 +78,6 @@ function addOrders(){
   (size_pizza==='small'||size_pizza==='medium'||size_pizza==='large'))
   {
       pizza = new Pizza(type_pizza,size_pizza);
-      console.log(type_pizza,size_pizza);
       listpizza.addPizza(pizza);
       
   }
@@ -114,7 +113,6 @@ function placeOrder(){
   }
 
   $("#output").text(output).fadeIn();
-  console.log(addressAndName());
   $("#outputPrice").text(addressAndName()+";  Total Price: $"+totalAmount).show();
 
   
